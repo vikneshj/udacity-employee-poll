@@ -8,7 +8,7 @@ import {setAuthedUser} from "../actions/authedUser";
 
 describe("Nav", () => {
     it("should render the component", () => {
-        store.dispatch(setAuthedUser({id: "sarahedo", password: ""}));
+        store.dispatch(setAuthedUser({id: "vikneshj", password: ""}));
 
         const component = render(
             <Provider store={store}>
@@ -22,7 +22,7 @@ describe("Nav", () => {
     });
 
     it("should display username of logged in user", () => {
-        store.dispatch(setAuthedUser({id: "sarahedo", password: ""}));
+        store.dispatch(setAuthedUser({id: "vikneshj", password: ""}));
 
         const component = render(
             <Provider store={store}>
@@ -33,7 +33,7 @@ describe("Nav", () => {
         );
 
         const userSpanElement = component.getByTestId("user-information");
-        expect(userSpanElement.textContent).toBe("User: sarahedo");
+        expect(userSpanElement.textContent).toBe("User: vikneshj");
 
     });
 });

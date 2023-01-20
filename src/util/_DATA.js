@@ -1,9 +1,9 @@
 let users = {
-  sarahedo: {
-    id: 'sarahedo',
-    password:'password123',
-    name: 'Sarah Edo',
-    avatarURL: 'https://github.com/sarah.png',
+  vikneshj: {
+    id: 'vikneshj',
+    password:'udacity12',
+    name: 'Viknesh J',
+    avatarURL: 'https://github.com/mala.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -50,10 +50,10 @@ let users = {
 let questions = {
   "8xf0y6ziyjabvozdd253nd": {
     id: '8xf0y6ziyjabvozdd253nd',
-    author: 'sarahedo',
+    author: 'vikneshj',
     timestamp: 1467166872634,
     optionOne: {
-      votes: ['sarahedo'],
+      votes: ['vikneshj'],
       text: 'Build our new application with Javascript',
     },
     optionTwo: {
@@ -70,20 +70,20 @@ let questions = {
       text: 'hire more frontend developers',
     },
     optionTwo: {
-      votes: ['mtsamis', 'sarahedo'],
+      votes: ['mtsamis', 'vikneshj'],
       text: 'hire more backend developers'
     }
   },
   "am8ehyc8byjqgar0jgpub9": {
     id: 'am8ehyc8byjqgar0jgpub9',
-    author: 'sarahedo',
+    author: 'vikneshj',
     timestamp: 1488579767190,
     optionOne: {
       votes: [],
       text: 'conduct a release retrospective 1 week after a release',
     },
     optionTwo: {
-      votes: ['sarahedo'],
+      votes: ['vikneshj'],
       text: 'conduct release retrospectives quarterly'
     }
   },
@@ -96,7 +96,7 @@ let questions = {
       text: 'have code reviews conducted by peers',
     },
     optionTwo: {
-      votes: ['sarahedo'],
+      votes: ['vikneshj'],
       text: 'have code reviews conducted by managers'
     }
   },
