@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Card = ({question, author}) => {
     return (
@@ -16,6 +17,12 @@ const Card = ({question, author}) => {
         </div>
         </Link>
     );
+}
+
+//Fixed review comments to add the propType checker
+Card.propTypes={
+  question: PropTypes.object.isRequired,
+  author: PropTypes.object.isRequired,
 }
 
 export default connect()(Card);

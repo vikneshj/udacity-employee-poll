@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import Card from "./Card";
+import PropTypes from "prop-types";
 
 const Home = ({authedUser, questions, users}) => {
 
@@ -46,4 +47,15 @@ const mapStateToProps = ({authedUser, questions, users}) => ({
     users,
 });
 
+Home.propTypes = {
+    authedUser: PropTypes.object.isRequired,
+    questions: PropTypes.array.isRequired,
+    users: PropTypes.object.isRequired,
+} 
+
+mapStateToProps.propTypes = {
+    authedUser: PropTypes.object.isRequired,
+    questions: PropTypes.array.isRequired,
+    users: PropTypes.object.isRequired,
+}
 export default connect(mapStateToProps)(Home);

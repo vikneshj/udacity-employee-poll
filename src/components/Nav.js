@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {handleLogout} from "../actions/authedUser";
+import PropTypes from "prop-types";
 
 const Nav = ({dispatch, authedUserId, author}) => {
 
@@ -36,5 +37,14 @@ const mapStateToProps = ({authedUser}) => ({
     authedUserId: authedUser.id,
 });
 
+Nav.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    authedUserId: PropTypes.string.isRequired,
+    auther: PropTypes.array,
+} 
+
+mapStateToProps.propTypes = {
+    authedUser: PropTypes.object.isRequired,
+}
 
 export default connect(mapStateToProps)(Nav);

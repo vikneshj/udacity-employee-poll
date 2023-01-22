@@ -11,6 +11,7 @@ import {handleInitialData} from "./actions/shared";
 import Leaderboard from "./components/Leaderboard";
 import Error404 from "./components/404";
 import PrivateRoute from "./components/PrivateRoute";
+import PropTypes from "prop-types";
 
 function App({dispatch, loggedIn}) {
     useEffect(() => {
@@ -35,5 +36,14 @@ function App({dispatch, loggedIn}) {
 const mapStateToProps = ({authedUser}) => ({
     loggedIn: !!authedUser,
 });
+
+App.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    loggedIn: PropTypes.bool.isRequired,
+}
+
+mapStateToProps.propTypes = {
+    authedUser: PropTypes.object.isRequired,
+}
 
 export default connect(mapStateToProps)(App);

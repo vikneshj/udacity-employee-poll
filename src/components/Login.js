@@ -2,6 +2,7 @@ import {connect} from "react-redux";
 import {Navigate} from "react-router-dom";
 import {useState} from "react";
 import {handleLogin} from "../actions/authedUser";
+import PropTypes from "prop-types";
 
 const Login = ({dispatch, loggedIn}) => {
     const [username, setUsername] = useState("");
@@ -77,5 +78,14 @@ const Login = ({dispatch, loggedIn}) => {
 const mapStateToProps = ({authedUser}) => ({
     loggedIn: !!authedUser,
 });
+
+Login.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    loggedIn: PropTypes.bool.isRequired,
+}
+
+mapStateToProps.propTypes = {
+    authedUser: PropTypes.object.isRequired,
+}
 
 export default connect(mapStateToProps)(Login);

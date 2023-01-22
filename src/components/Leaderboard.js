@@ -1,4 +1,5 @@
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 
 const Leaderboard = ({users}) => {
     return (
@@ -35,5 +36,14 @@ const Leaderboard = ({users}) => {
 const mapStateToProps = ({users}) => ({
     users: Object.values(users).sort((a, b) => Object.keys(b.answers).length - Object.keys(a.answers).length),
 });
+
+//Fixed review comments to add the propType checker
+Leaderboard.propTypes = {
+    users: PropTypes.object.isRequired,
+}
+
+mapStateToProps.propTypes = {
+    users: PropTypes.object.isRequired,
+}
 
 export default connect(mapStateToProps)(Leaderboard);

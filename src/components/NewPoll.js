@@ -2,6 +2,7 @@ import {connect} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {handleAddQuestion} from "../actions/questions";
+import PropTypes from "prop-types";
 
 const NewPoll = ({dispatch}) => {
     const navigate = useNavigate();
@@ -74,5 +75,9 @@ const NewPoll = ({dispatch}) => {
         </div>
     );
 };
+
+NewPoll.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+}
 
 export default connect()(NewPoll);

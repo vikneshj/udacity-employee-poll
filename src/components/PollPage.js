@@ -2,6 +2,7 @@ import {connect} from "react-redux";
 import {Navigate, useNavigate, useParams} from "react-router-dom";
 import {handleAddAnswer} from "../actions/questions";
 import "./PollPage.css";
+import PropTypes from "prop-types";
 
 const PollPage = ({dispatch, authedUser, question, author}) => {
     const navigate = useNavigate();
@@ -94,5 +95,18 @@ const mapStateToProps = ({authedUser, users, questions}) => {
         // throw new Error(`Question or user is not found.\n ${e}`);
     }
 };
+
+PollPage.propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    authedUser: PropTypes.object.isRequired,
+    question: PropTypes.object.isRequired,
+    auther: PropTypes.array,
+} 
+
+mapStateToProps.PropTypes = {
+    authedUser: PropTypes.object.isRequired,
+    users: PropTypes.object.isRequired,
+    question: PropTypes.object.isRequired,
+}
 
 export default connect(mapStateToProps)(PollPage);
