@@ -18,7 +18,7 @@ function App({dispatch, loggedIn}) {
     });
 
     return (
-        <div className="container mx-auto py-4">
+        <div className="container mx-auto">
             {loggedIn && <Nav/>}
             <Routes>
                 <Route path="/login" exact element={<Login/>}/>

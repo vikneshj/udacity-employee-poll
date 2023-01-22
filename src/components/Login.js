@@ -4,7 +4,7 @@ import {useState} from "react";
 import {handleLogin} from "../actions/authedUser";
 
 const Login = ({dispatch, loggedIn}) => {
-    const [username, setUsername] = useState("");
+    const [username, setUsername] = useState("Enter user name");
     const [password, setPassword] = useState("");
 
     if (loggedIn) {
@@ -32,10 +32,10 @@ const Login = ({dispatch, loggedIn}) => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mt-9" data-testid="login-heading">Login</h1>
+            <h1 className="text-3xl font-bold text-center" data-testid="login-heading">Login</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="username" className="block text-sm font-medium text-slate-700">Username</label>
+                    <label htmlFor="username" className="username">Username</label>
                     <div className="mt-1">
                         <input
                             value={username}
@@ -44,11 +44,11 @@ const Login = ({dispatch, loggedIn}) => {
                             name="username"
                             id="username"
                             data-testid="username"
-                            className="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"/>
+                            className="px-3 py-2 border"/>
                     </div>
                 </div>
                 <div className="mt-6">
-                    <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label>
+                    <label htmlFor="password" className="password">Password</label>
                     <div className="mt-1">
                         <input
                             value={password}
@@ -57,13 +57,13 @@ const Login = ({dispatch, loggedIn}) => {
                             name="password"
                             id="password"
                             data-testid="password"
-                            className="px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 disabled:shadow-none"/>
+                            className="px-3 py-2 border"/>
                     </div>
                 </div>
                 <div className="mt-6 text-right">
                     <button type="submit"
                             data-testid="submit"
-                            className="bg-sky-500 hover:bg-sky-700 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white">
+                            className="bg-sky-500 px-5 py-2.5 font-bold text-white">
                         Login
                     </button>
                 </div>
