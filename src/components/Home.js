@@ -14,7 +14,8 @@ const Home = ({authedUser, questions, users}) => {
         <div>
             <h1 className="text-4xl font-bold mt-9" data-testid="heading">Home</h1>
 
-            <h2 className="text-2xl font-semibold mt-6 text-center block border">New Questions</h2>
+            <div className="border mt-4 bg-sky-100">
+            <h2 className="text-2xl font-semibold bg-sky-600 text-center block border">New Questions</h2>
             <ul className="grid md:grid-cols-2">
                 {questions
                     .filter(unanswered)
@@ -24,8 +25,10 @@ const Home = ({authedUser, questions, users}) => {
                         </li>
                     ))}
             </ul>
+            </div>
 
-            <h2 className="text-2xl font-semibold mt-6 text-center block border">Answered Questions</h2>
+            <div className="border mt-4 bg-sky-100">
+            <h2 className="text-2xl font-semibold bg-sky-600 text-center block border">Done</h2>
             <ul className="grid md:grid-cols-2">
                 {questions
                     .filter(answered)
@@ -35,6 +38,7 @@ const Home = ({authedUser, questions, users}) => {
                         </li>
                     ))}
             </ul>
+            </div>
         </div>
     );
 }
