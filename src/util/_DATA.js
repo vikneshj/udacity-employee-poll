@@ -3,7 +3,7 @@ let users = {
     id: 'vikneshj',
     password:'udacity12',
     name: 'Viknesh J',
-    avatarURL: 'https://github.com/mala.png',
+    avatarURL: 'https://github.com/viknesh.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -12,22 +12,22 @@ let users = {
     },
     questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
   },
-  tylermcginnis: {
-    id: 'tylermcginnis',
-    password:'abc321',
-    name: 'Tyler McGinnis',
-    avatarURL: 'https://github.com/tyler.png',
+  krishnaRaj: {
+    id: 'krishnaRaj',
+    password:'reactJs12',
+    name: 'Krishna Raj',
+    avatarURL: 'https://github.com/krishna.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
     },
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
   },
-  mtsamis: {
-    id: 'mtsamis',
-    password:'xyz123',
-    name: 'Mike Tsamis',
-    avatarURL: 'https://github.com/mike.png',
+  myilsamy: {
+    id: 'myilsamy',
+    password:'peacock98',
+    name: 'Myil Samy',
+    avatarURL: 'https://github.com/myil.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -35,11 +35,11 @@ let users = {
     },
     questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
   },
-  zoshikanlu: {
-    id: 'zoshikanlu',
-    password:'pass246',
-    name: 'Zenobia Oshikanlu',
-    avatarURL: 'https://github.com/zenobia.png',
+  poojakatta: {
+    id: 'poojakatta',
+    password:'vicky12',
+    name: 'Poojitha Katta',
+    avatarURL: 'https://github.com/poojitha.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
     },
@@ -63,14 +63,14 @@ let questions = {
   },
   "6ni6ok3ym7mf1p33lnez": {
     id: '6ni6ok3ym7mf1p33lnez',
-    author: 'mtsamis',
+    author: 'myilsamy',
     timestamp: 1468479767190,
     optionOne: {
       votes: [],
       text: 'hire more frontend developers',
     },
     optionTwo: {
-      votes: ['mtsamis', 'vikneshj'],
+      votes: ['myilsamy', 'vikneshj'],
       text: 'hire more backend developers'
     }
   },
@@ -89,7 +89,7 @@ let questions = {
   },
   "loxhs1bqm25b708cmbf3g": {
     id: 'loxhs1bqm25b708cmbf3g',
-    author: 'tylermcginnis',
+    author: 'krishnaRaj',
     timestamp: 1482579767190,
     optionOne: {
       votes: [],
@@ -102,27 +102,27 @@ let questions = {
   },
   "vthrdm985a262al8qx3do": {
     id: 'vthrdm985a262al8qx3do',
-    author: 'tylermcginnis',
+    author: 'krishnaRaj',
     timestamp: 1489579767190,
     optionOne: {
-      votes: ['tylermcginnis'],
+      votes: ['krishnaRaj'],
       text: 'take a course on ReactJS',
     },
     optionTwo: {
-      votes: ['mtsamis'],
+      votes: ['myilsamy'],
       text: 'take a course on unit testing with Jest'
     }
   },
   "xj352vofupe1dqz9emx13r": {
     id: 'xj352vofupe1dqz9emx13r',
-    author: 'mtsamis',
+    author: 'myilsamy',
     timestamp: 1493579767190,
     optionOne: {
-      votes: ['mtsamis', 'zoshikanlu'],
+      votes: ['myilsamy', 'poojakatta'],
       text: 'deploy to production once every two weeks',
     },
     optionTwo: {
-      votes: ['tylermcginnis'],
+      votes: ['krishnaRaj'],
       text: 'deploy to production once every month'
     }
   },

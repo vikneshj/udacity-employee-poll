@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <nav
-        class="flex justify-center space-x-4"
+        class="flex justify-center space-x-4 underline"
       >
         <a
           class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
@@ -33,6 +33,10 @@ Object {
           User: 
           vikneshj
         </span>
+        <img
+          alt=""
+          class="h-8 w-8 rounded-md"
+        />
         <button
           class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
         >
@@ -43,7 +47,7 @@ Object {
   </body>,
   "container": <div>
     <nav
-      class="flex justify-center space-x-4"
+      class="flex justify-center space-x-4 underline"
     >
       <a
         class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
@@ -70,6 +74,10 @@ Object {
         User: 
         vikneshj
       </span>
+      <img
+        alt=""
+        class="h-8 w-8 rounded-md"
+      />
       <button
         class="font-medium px-3 py-2 text-slate-700 rounded-lg hover:bg-slate-100 hover:text-slate-900"
       >

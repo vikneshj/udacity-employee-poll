@@ -7,18 +7,22 @@ Object {
     <div>
       <div>
         <h1
-          class="text-3xl font-bold mt-9"
+          class="text-3xl text-center font-bold mt-9"
         >
-          New Poll
+          Would You Rather
         </h1>
+        <h4
+          class="text-1xl text-center mt-2"
+        >
+          Create your own poll
+        </h4>
         <form>
           <div
             class="mt-3"
           >
             <label
-              class="block text-sm font-medium text-slate-700"
+              class="block text-sm text-center font-medium text-slate-700"
               data-testid="firstOptionLabel"
-              for="firstOption"
             >
               First Option
             </label>
@@ -39,9 +43,8 @@ Object {
             class="mt-3"
           >
             <label
-              class="block text-sm font-medium text-slate-700"
+              class="block text-sm text-center font-medium text-slate-700"
               data-testid="secondOptionLabel"
-              for="secondOption"
             >
               Second Option
             </label>
@@ -76,18 +79,22 @@ Object {
   "container": <div>
     <div>
       <h1
-        class="text-3xl font-bold mt-9"
+        class="text-3xl text-center font-bold mt-9"
       >
-        New Poll
+        Would You Rather
       </h1>
+      <h4
+        class="text-1xl text-center mt-2"
+      >
+        Create your own poll
+      </h4>
       <form>
         <div
           class="mt-3"
         >
           <label
-            class="block text-sm font-medium text-slate-700"
+            class="block text-sm text-center font-medium text-slate-700"
             data-testid="firstOptionLabel"
-            for="firstOption"
           >
             First Option
           </label>
@@ -108,9 +115,8 @@ Object {
           class="mt-3"
         >
           <label
-            class="block text-sm font-medium text-slate-700"
+            class="block text-sm text-center font-medium text-slate-700"
             data-testid="secondOptionLabel"
-            for="secondOption"
           >
             Second Option
           </label>
