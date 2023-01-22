@@ -26,13 +26,14 @@ const NewPoll = ({dispatch}) => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mt-9">New Poll</h1>
+            <h1 className="text-3xl text-center font-bold mt-9">Would You Rather</h1>
+            <h4 className="text-1xl text-center mt-2">Create your own poll</h4>
             <form onSubmit={handleSubmit}>
 
                 <div className="mt-3">
-                    <label htmlFor="firstOption"
+                    <label
                            data-testid="firstOptionLabel"
-                           className="block text-sm font-medium text-slate-700">First Option</label>
+                           className="block text-sm text-center font-medium text-slate-700">First Option</label>
                     <div className="mt-1">
                         <input
                             value={firstOption}
@@ -46,9 +47,9 @@ const NewPoll = ({dispatch}) => {
                 </div>
 
                 <div className="mt-3">
-                    <label htmlFor="secondOption"
+                    <label 
                            data-testid="secondOptionLabel"
-                           className="block text-sm font-medium text-slate-700">Second Option</label>
+                           className="block text-sm text-center font-medium text-slate-700">Second Option</label>
                     <div className="mt-1">
                         <input
                             value={secondOption}

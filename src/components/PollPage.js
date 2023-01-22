@@ -40,10 +40,10 @@ const PollPage = ({dispatch, authedUser, question, author}) => {
 
     return (
         <div>
-            <h1 className="text-3xl font-bold mt-9">Poll by {author.id}</h1>
+            <h1 className="text-3xl text-center font-bold mt-6">Poll by {author.id}</h1>
 
             <div className="flex justify-center">
-                <img src={author.avatarURL} alt="Profile" className="h-24 w-24"/>
+                <img src={author.avatarURL} alt="Profile" className="h-24 w-24 rounded-full mt-6"/>
             </div>
 
             <div className="flex justify-center">
@@ -53,26 +53,26 @@ const PollPage = ({dispatch, authedUser, question, author}) => {
             <div className="grid grid-cols-2 gap-4 mt-4">
 
                 <button onClick={handleOptionOne} disabled={hasVoted}
-                        className={"p-2 rounded-xl bg-zinc-100 hover:shadow-xl transition " + (hasVotedForOptionOne ? "bg-lime-400" : "")}>
+                        className={"p-2 bg-zinc-100 " + (hasVotedForOptionOne ? "bg-lime-400" : "")}>
                     <div className={hasVotedForOptionOne ? "chosen" : ""}>
                         <p className="font-bold mb-2">{question.optionOne.text}</p>
                         {!hasVoted &&
-                        <p className="underline underline-offset-4 mb-3">Click</p>
+                        <p className="border border-zinc-900 w-full bg-sky-200">Click</p>
                         }
                         {hasVoted &&
-                        <p className="text-xs">Votes: {question.optionOne.votes.length} ({calcPercentage("optionOne", question)})</p>
+                        <p className="votes">Votes: {question.optionOne.votes.length} ({calcPercentage("optionOne", question)})</p>
                         }
                     </div>
                 </button>
 
                 <button onClick={handleOptionTwo} disabled={hasVoted}
-                        className={"p-2 rounded-xl bg-zinc-100 hover:shadow-xl transition " + (hasVotedForOptionTwo ? "bg-lime-400" : "")}>
+                        className={"p-2 bg-zinc-100" + (hasVotedForOptionTwo ? "bg-lime-400" : "")}>
                     <p className="font-bold mb-2">{question.optionTwo.text}</p>
                     {!hasVoted &&
-                    <p className="underline underline-offset-4 mb-3">Click</p>
+                    <p className="border border-zinc-900 w-full bg-sky-200">Click</p>
                     }
                     {hasVoted &&
-                    <p className="text-xs">Votes: {question.optionTwo.votes.length} ({calcPercentage("optionTwo", question)})</p>
+                    <p className="votes">Votes: {question.optionTwo.votes.length} ({calcPercentage("optionTwo", question)})</p>
                     }
                 </button>
 

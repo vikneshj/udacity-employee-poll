@@ -4,7 +4,7 @@ import {useState} from "react";
 import {handleLogin} from "../actions/authedUser";
 
 const Login = ({dispatch, loggedIn}) => {
-    const [username, setUsername] = useState("Enter user name");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     if (loggedIn) {
@@ -35,32 +35,34 @@ const Login = ({dispatch, loggedIn}) => {
             <h1 className="text-3xl font-bold text-center" data-testid="login-heading">Login</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="username" className="username">Username</label>
+                    <label className="text-center">User</label>
                     <div className="mt-1">
                         <input
                             value={username}
+                            placeholder="User"
                             onChange={handleUsername}
                             type="text"
                             name="username"
                             id="username"
                             data-testid="username"
-                            className="px-3 py-2 border"/>
+                            className="px-3 py-2 border w-full"/>
                     </div>
                 </div>
                 <div className="mt-6">
-                    <label htmlFor="password" className="password">Password</label>
+                    <label className="text-center">Password</label>
                     <div className="mt-1">
                         <input
                             value={password}
+                            placeholder="password"
                             onChange={handlePassword}
                             type="password"
                             name="password"
                             id="password"
                             data-testid="password"
-                            className="px-3 py-2 border"/>
+                            className="px-3 py-2 border w-full"/>
                     </div>
                 </div>
-                <div className="mt-6 text-right">
+                <div className="mt-6 text-center">
                     <button type="submit"
                             data-testid="submit"
                             className="bg-sky-500 px-5 py-2.5 font-bold text-white">

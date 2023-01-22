@@ -31,7 +31,7 @@ describe("App", () => {
         expect(heading).toBeInTheDocument();
     });
 
-    it("should show Dashboard page when logged in", () => {
+    it("should show home page when logged in", () => {
         store.dispatch(setAuthedUser({id: "", password: ""}));
 
         const component = render(

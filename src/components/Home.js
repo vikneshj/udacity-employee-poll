@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Card from "./Card";
 
-const Dashboard = ({authedUser, questions, users}) => {
+const Home = ({authedUser, questions, users}) => {
 
     const unanswered = (question) => (!question.optionOne.votes.includes(authedUser.id)
         && !question.optionTwo.votes.includes(authedUser.id));
@@ -11,9 +11,9 @@ const Dashboard = ({authedUser, questions, users}) => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold mt-9" data-testid="heading">Dashboard</h1>
+            <h1 className="text-4xl font-bold mt-9" data-testid="heading">Home</h1>
 
-            <h2 className="text-2xl font-semibold mt-6">New Questions</h2>
+            <h2 className="text-2xl font-semibold mt-6 text-center block border">New Questions</h2>
             <ul className="grid md:grid-cols-2">
                 {questions
                     .filter(unanswered)
@@ -24,7 +24,7 @@ const Dashboard = ({authedUser, questions, users}) => {
                     ))}
             </ul>
 
-            <h2 className="text-2xl font-semibold mt-6">Answered Questions</h2>
+            <h2 className="text-2xl font-semibold mt-6 text-center block border">Answered Questions</h2>
             <ul className="grid md:grid-cols-2">
                 {questions
                     .filter(answered)
@@ -46,4 +46,4 @@ const mapStateToProps = ({authedUser, questions, users}) => ({
     users,
 });
 
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps)(Home);

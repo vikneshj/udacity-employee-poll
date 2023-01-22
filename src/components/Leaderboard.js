@@ -3,25 +3,25 @@ import {connect} from "react-redux";
 const Leaderboard = ({users}) => {
     return (
         <div>
-            <h1 className="text-3xl font-bold mt-9">Leaderboard</h1>
+            <h1 className="text-3x1 font-bold mt-4">Leaderboard</h1>
 
-            <table className="border-collapse table-auto w-full text-sm mt-6">
-                <thead className="table-header-group">
+            <table className="mt-3">
+                <thead className="table-header">
                 <tr className="table-row">
-                    <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">User</th>
-                    <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Answered</th>
-                    <th className="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Created</th>
+                    <th className="p-4 pl-8 text-zinc-500 text-center">User</th>
+                    <th className="p-4 pl-8 text-zinc-500 text-center">Answered</th>
+                    <th className="p-4 pl-8 text-zinc-500 text-center">Created</th>
                 </tr>
                 </thead>
-                <tbody className="bg-white dark:bg-slate-800">
+                <tbody className="data-group">
                 {
                     users.map((user) => (
                         <tr key={user.id}>
-                            <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
+                            <td className="p-4 pl-8 text-zinc-800">
                                 <span className="font-bold">{user.name}</span>
                                 <br/>{user.id}</td>
-                            <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{Object.keys(user.answers).length}</td>
-                            <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{user.questions.length}</td>
+                            <td className="p-4 pl-8 text-zinc-500">{Object.keys(user.answers).length}</td>
+                            <td className="p-4 pl-8 text-zinc-500">{user.questions.length}</td>
                         </tr>
                     ))
                 }

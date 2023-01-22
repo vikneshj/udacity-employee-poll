@@ -11,7 +11,7 @@ const Card = ({question, author}) => {
             <div>
                 <div className="text-xl font-semibold text-black">{question.author}</div>
                 <p className="italic">{new Date(question.timestamp).toDateString()}</p>
-                <p className="underline">Show</p>
+                <p className="border block text-center mt-4 border-green-900 text-green-900">Show</p>
             </div>
         </div>
         </Link>
